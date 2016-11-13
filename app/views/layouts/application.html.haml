@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title ComfortCrib
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %p.notice
+      = notice
+    %p.alert
+      = alert
+      
+    = link_to 'Sign in', new_guest_session_path
+    = yield
