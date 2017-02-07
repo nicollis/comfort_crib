@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 feature "signing up" do
-  
+  let(:guest) {FactoryGirl.build(:guest)}
+
   def fill_in_signup_fields
     fill_in "guest[email]", with: guest.email
     fill_in "guest[password]", with: guest.password
