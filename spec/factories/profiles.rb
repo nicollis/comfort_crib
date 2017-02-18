@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :profile do
-    guest nil
-    name "MyString"
-    address "MyString"
-    zipcode 1
-    phone "MyString"
-    bio "MyText"
+    guest
+    name { Faker::Name.name }
+    address { Faker::Address.street_address }
+    zipcode { Faker::Address.zip_code }
+    phone { Faker::PhoneNumber.phone_number }
+    bio { Faker::Lorem.paragraph(2) }
   end
 end

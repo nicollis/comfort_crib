@@ -23,7 +23,7 @@ feature "guest profiles" do
         click_button "Create Profile"
         expect(Profile.count).to eq 0
         expect(page).to have_content("Create a new Profile")
-        expect(page).to have_content("Name can't be blank.")
+        expect(page).to have_content("Name can't be blank")
     end
     
     scenario "guest sees profile error message if no bio" do
@@ -33,5 +33,6 @@ feature "guest profiles" do
         click_button "Create Profile"
         expect(Profile.count).to eq 0
         expect(page).to have_content("Create a new Profile")
-        expect(page).to have_content("Bio can't be blank.")
+        expect(page).to have_content("Bio can't be blank")
     end
+end

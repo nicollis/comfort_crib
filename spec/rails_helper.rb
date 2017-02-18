@@ -49,4 +49,6 @@ ENV['RAILS_ENV'] ||= 'test'
 
 		config.filter_rails_from_backtrace!	
 
+		config.include Warden::Test::Helpers
+
 	end

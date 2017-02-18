@@ -1,5 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe Profile, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "validations" do
+    it "has a valid factory" do
+      expect(FactoryGirl.create(:profile)).to be_valid
+    end
+
+    it { should validate_presence_of(:bio) }
+    it { should validate_presence_of(:name) }
+    it { should validate_presence_of(:guest_id)}
+  end 
+
+  describe "associations" do
+    it {should belong_to(:guest) }
+  end
+  
 end

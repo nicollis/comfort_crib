@@ -39,6 +39,7 @@ group :development, :test do
     gem 'better_errors'
     gem 'binding_of_caller'
     gem 'capybara-email'
+    gem 'capybara'
     gem 'factory_girl_rails'
     gem 'faker'
     gem 'database_cleaner'

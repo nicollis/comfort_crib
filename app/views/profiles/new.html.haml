@@ -1,0 +1,20 @@
+Create a new Profile
+
+= form_for [@guest, @profile] do |f|
+
+    - if @profile.errors.any?
+        #error_explanation
+            %h2 Oops! We couldn't create your profile. Please see below.
+            %ul 
+                -# - binding.pry
+                - @profile.errors.full_messages.each do |message|
+                    %li 
+                        = message
+    
+    = f.label :name
+    = f.text_field :name 
+
+    = f.label :bio 
+    = f.text_area :bio 
+
+    = f.submit
