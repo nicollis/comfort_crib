@@ -21,7 +21,7 @@ class ProfilesController < ApplicationController
     private
 
     def profile_params
-        params.require(:profile).permit(:name, :bio, :guest_id, :phone, :address, :zipcode)
+        params.require(:profile).permit(:avatar, :name, :bio, :guest_id, :phone, :address, :zipcode)
     end 
 
     def set_guest

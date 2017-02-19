@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'devise'
 
+# Image Uploading and processing
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

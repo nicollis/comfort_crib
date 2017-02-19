@@ -57,6 +57,10 @@ GEM
     capybara-email (2.5.0)
       capybara (~> 2.4)
       mail
+    carrierwave (1.0.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     childprocess (0.6.1)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.1)
@@ -123,6 +127,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mini_magick (4.5.1)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
@@ -247,6 +252,7 @@ DEPENDENCIES
   binding_of_caller
   capybara
   capybara-email
+  carrierwave (~> 1.0)
   coffee-rails (~> 4.1.0)
   database_cleaner
   devise
@@ -256,6 +262,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   letter_opener
+  mini_magick
   pg
   pry
   pry-nav
