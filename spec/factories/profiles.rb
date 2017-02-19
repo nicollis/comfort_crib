@@ -6,5 +6,6 @@ FactoryGirl.define do
     zipcode { Faker::Address.zip_code }
     phone { Faker::PhoneNumber.phone_number }
     bio { Faker::Lorem.paragraph(2) }
+    avatar { Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/images/avatar.png'))) }
   end
 end

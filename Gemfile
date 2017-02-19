@@ -26,6 +26,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'devise'
 
+# Image Uploading, Processing, and Storage
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
+gem "fog-aws"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -52,6 +57,8 @@ group :development, :test do
     gem 'simple_bdd'
     gem 'shoulda-matchers'
     gem 'spring' 
+    # Creates ENV values locally
+    gem "figaro"
   end
 
 group :development do

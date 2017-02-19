@@ -11,6 +11,9 @@ Create a new Profile
                     %li 
                         = message
     
+    = f.label :avatar
+    = f.file_field :avatar
+
     = f.label :name
     = f.text_field :name, :required => true
 
