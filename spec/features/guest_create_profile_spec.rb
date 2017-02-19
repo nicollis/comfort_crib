@@ -12,6 +12,9 @@ feature "guest profiles" do
         expect(page).to have_content("Create a new Profile")
         fill_in "profile[name]", with: Faker::Name.name
         fill_in "profile[bio]", with: Faker::Lorem.paragraph(2)
+        fill_in "profile[phone]", with: Faker::PhoneNumber.phone_number
+        fill_in "profile[address]", with: Faker::Address.street_address
+        fill_in "profile[zipcode]", with: Faker::Address.zip_code
         click_button "Create Profile"
         expect(page).to have_content("Profile was successfully created.")
     end
