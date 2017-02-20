@@ -7,6 +7,7 @@ ENV['RAILS_ENV'] ||= 'test'
 	require 'capybara/rspec'
 	require 'simple_bdd'
 	require 'shoulda/matchers'
+	require 'pundit/rspec'
 
 	ActiveRecord::Migration.maintain_test_schema!
 

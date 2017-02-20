@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'haml-rails'
 gem 'devise'
+gem 'pundit'
 
 # Image Uploading, Processing, and Storage
 gem 'carrierwave', '~> 1.0'

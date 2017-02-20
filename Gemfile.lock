@@ -164,6 +164,8 @@ GEM
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     public_suffix (2.0.5)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -289,6 +291,7 @@ DEPENDENCIES
   pry
   pry-nav
   pry-rails (~> 0.3.2)
+  pundit
   rails (= 4.2.6)
   rspec-rails
   sass-rails (~> 5.0)

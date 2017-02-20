@@ -1,13 +1,16 @@
 class ProfilesController < ApplicationController
     before_action :set_guest
+    before_action :authenticate_guest!
 
     def new
         @profile = @guest.build_profile
+        authorize @profile
     end 
 
     def create
         @profile = @guest.create_profile(profile_params)
-
+        authorize @profile
+        
         respond_to do |format|
             if @profile.save
                 format.html { redirect_to root_path, notice: "Profile was successfully created." }
