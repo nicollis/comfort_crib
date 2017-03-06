@@ -1,5 +1,12 @@
 $cc-red: #C81D11;
+$cc-darkred: #A40D01;
 
 .cc-red {
   color: $cc-red;
+}
+
+.cc-btn-primary {
+  background-color: $cc-red;
+  border-color: $cc-darkred;
+  color: white;
 }
