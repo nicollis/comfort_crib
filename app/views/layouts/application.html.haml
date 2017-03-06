@@ -6,11 +6,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    = render 'layouts/main_nav'
     %p.notice
       = notice
     %p.alert
       = alert
-      
-    = link_to 'Log in', new_guest_session_path
-    = link_to 'Sign up', new_guest_registration_path
     = yield

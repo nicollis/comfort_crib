@@ -1,0 +1,14 @@
+%nav.navbar.navbar-default.navbar-static-top
+  .container-fluid
+    .navbar-header
+      %a.navbar-brand{href: root_path}
+        ComfortCrib
+    %ul.nav.navbar-nav.navbar-right
+      %li
+        = link_to 'Become a Host', root_path
+      %li
+        = link_to 'Help', root_path
+      %li
+        = link_to 'Sign up', new_guest_registration_path
+      %li 
+        = link_to 'Log in', new_guest_session_path
