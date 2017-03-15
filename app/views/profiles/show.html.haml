@@ -1,0 +1,14 @@
+.container-fluid
+  .col-sm-5.col-center.text-center
+    = image_tag @profile.avatar_url, height: '200', width: '200', class: 'img-circle center'
+    %h2
+      = @profile.name
+
+    %h4
+      = @profile.bio
+    %p
+      = @profile.phone
+    %p
+      = @profile.address
+    %p
+      = @profile.zipcode

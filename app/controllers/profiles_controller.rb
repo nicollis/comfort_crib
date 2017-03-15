@@ -15,6 +15,7 @@ class ProfilesController < ApplicationController
             flash[:notice] = "Profile updated!"
             redirect_to edit_guest_profile_url @guest
         end
+        authorize @profile
     end
 
     def new
