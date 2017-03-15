@@ -13,8 +13,10 @@ class ProfilesController < ApplicationController
     def update
         if @profile.update_attributes! profile_params
             flash[:notice] = "Profile updated!"
-            redirect_to edit_guest_profile_url @guest
+        else
+            flash[:error] = "Error while updating profile: #{@profile.errors}"
         end
+        redirect_to edit_guest_profile_url @guest
         authorize @profile
     end
 
