@@ -1,11 +1,20 @@
 class ProfilesController < ApplicationController
     before_action :set_guest
+    before_action :set_profile, except: [:new, :create]
     before_action :authenticate_guest!
 
     def show
     end
 
     def edit
+        authorize @profile
+    end
+
+    def update
+        if @profile.update_attributes! profile_params
+            flash[:notice] = "Profile updated!"
+            redirect_to edit_guest_profile_url @guest
+        end
     end
 
     def new
@@ -35,5 +44,9 @@ class ProfilesController < ApplicationController
 
     def set_guest
         @guest = Guest.find(params[:guest_id])
+    end
+
+    def set_profile
+        @profile = @guest.profile
     end
 end

@@ -1,12 +1,12 @@
 .container-fluid
   .col-sm-5.col-center
-    %h2.text-center Create a new Profile
+    %h2.text-center Edit Profile
 
     = form_for @profile, url: guest_profile_path(@guest) do |f|
 
       - if @profile.errors.any?
         #error_explanation
-          %h2 Oops! We couldn't create your profile. Please see below.
+          %h2 Oops! We couldn't edit your profile. Please see below.
           %ul 
             - @profile.errors.full_messages.each do |message|
               %li 

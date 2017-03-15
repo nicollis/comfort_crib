@@ -1,0 +1,21 @@
+= f.label :avatar
+%br/
+= image_tag @guest.profile.avatar_url, height: '200', width: '200', class: ''
+= f.file_field :avatar
+%br/
+= f.label :name
+= f.text_field :name, :required => true, class: 'form-control'
+%br/
+= f.label :bio 
+= f.text_area :bio, :required => true, class: 'form-control'
+%br/
+= f.label :phone
+= f.telephone_field :phone, class: 'form-control'
+%br/
+= f.label :address
+= f.text_field :address, class: 'form-control'
+%br/
+= f.label :zipcode
+= f.number_field :zipcode, class: 'form-control'
+%br/
+= f.submit "Submit", class: 'cc-btn-primary btn btn-lg'
