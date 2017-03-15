@@ -12,7 +12,7 @@ feature "guest profiles" do
 
         visit new_guest_profile_path(guest)
         expect(page).to have_content("Create a new Profile")
-
+        
         attach_file "profile[avatar]", pic_path
         fill_in "profile[name]", with: Faker::Name.name
         fill_in "profile[bio]", with: Faker::Lorem.paragraph(2)

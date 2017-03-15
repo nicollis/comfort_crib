@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :guests
   
-  resources :guests do
-    resources :profiles
+  resources :guests, only: :none do
+    resource :profile
   end
 
   root 'home#index'

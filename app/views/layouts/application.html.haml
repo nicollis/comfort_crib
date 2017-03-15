@@ -7,8 +7,10 @@
     = csrf_meta_tags
   %body
     = render 'layouts/main_nav'
-    %p.notice
-      = notice
-    %p.alert
-      = alert
+    - unless notice.nil?
+      .notice.alert.alert-success
+        = notice
+    - unless alert.nil?
+      .alert.alert-danger
+        = alert
     = yield

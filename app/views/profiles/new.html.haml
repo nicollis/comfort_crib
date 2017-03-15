@@ -1,32 +1,33 @@
-Create a new Profile
+.container-fluid
+  .col-sm-5.col-center
+    Create a new Profile
 
-= form_for [@guest, @profile] do |f|
+    = form_for @profile, url: guest_profile_path(@guest) do |f|
 
-    - if @profile.errors.any?
+      - if @profile.errors.any?
         #error_explanation
-            %h2 Oops! We couldn't create your profile. Please see below.
-            %ul 
-                -# - binding.pry
-                - @profile.errors.full_messages.each do |message|
-                    %li 
-                        = message
+          %h2 Oops! We couldn't create your profile. Please see below.
+          %ul 
+            - @profile.errors.full_messages.each do |message|
+              %li 
+                = message
     
-    = f.label :avatar
-    = f.file_field :avatar
+      = f.label :avatar
+      = f.file_field :avatar, class: 'form-control'
 
-    = f.label :name
-    = f.text_field :name, :required => true
+      = f.label :name
+      = f.text_field :name, :required => true, class: 'form-control'
 
-    = f.label :bio 
-    = f.text_area :bio, :required => true
+      = f.label :bio 
+      = f.text_area :bio, :required => true, class: 'form-control'
 
-    = f.label :phone
-    = f.telephone_field :phone
+      = f.label :phone
+      = f.telephone_field :phone, class: 'form-control'
 
-    = f.label :address
-    = f.text_field :address
+      = f.label :address
+      = f.text_field :address, class: 'form-control'
 
-    = f.label :zipcode
-    = f.number_field :zipcode
+      = f.label :zipcode
+      = f.number_field :zipcode, class: 'form-control'
 
-    = f.submit
+      = f.submit "Create", class: 'cc-btn-primary btn btn-lg'

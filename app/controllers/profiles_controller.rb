@@ -2,6 +2,12 @@ class ProfilesController < ApplicationController
     before_action :set_guest
     before_action :authenticate_guest!
 
+    def show
+    end
+
+    def edit
+    end
+
     def new
         @profile = @guest.build_profile
         authorize @profile
